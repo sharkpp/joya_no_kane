@@ -1,0 +1,13 @@
+; Let's HSPIC! バージョン情報用ファイルのサンプル
+; 行の先頭部分に｢;｣(セミコロン)を付けると、その行はスキップします。
+_FILEVERSION=1.0.0.0
+_PRODUCTVERSION=1.0.0.0
+Comments=除夜の鐘をつきます
+CompanyName=sharkpp
+FileDescription=除夜の鐘 for windows
+FileVersion=1.0.0.0
+InternalName=bells.exe
+LegalCopyright=Copyright(C) 2011 sharkpp all right reserved.
+OriginalFilename=bells.exe
+ProductName=除夜の鐘 for windows
+ProductVersion=1.0.0.0
