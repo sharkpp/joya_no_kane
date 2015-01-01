@@ -1,6 +1,6 @@
 # The watch-night bell(Joya no kane) program
 
-除夜の鐘を鳴らすだけのプログラム
+除夜の鐘をつくだけのプログラム
 
 ## 必要なもの
 
