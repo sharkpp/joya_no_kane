@@ -1,0 +1,25 @@
+; ----------------------------------------------------------
+; bells - The watch-night bell(Joya no kane) program
+; Copyright (c) 2011,2015 sharkpp All rights reserved.
+; This source code is under the MIT License.
+; and bells.bmp, bells.png and bells.wav is under CC BY 4.0.
+; ----------------------------------------------------------
+
+#include "hsp3dish.as"
+
+#define BG_IMAGE    "bells.png"
+#define CHIME_SOUND "bells.wav"
+#define BG_IMAGE_SX 128
+#define BG_IMAGE_SY 128
+
+#pack   BG_IMAGE
+#pack   CHIME_SOUND
+#packopt name    "bells"
+
+wx = ginfo_winx
+wy = ginfo_winy
+screen 0, wx, wy
+
+celload BG_IMAGE, 2, 0
+
+#include "bells_core.as"

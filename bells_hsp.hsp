@@ -1,0 +1,52 @@
+; ----------------------------------------------------------
+; bells - The watch-night bell(Joya no kane) program
+; Copyright (c) 2011,2015 sharkpp All rights reserved.
+; This source code is under the MIT License.
+; and bells.bmp, bells.png and bells.wav is under CC BY 4.0.
+; ----------------------------------------------------------
+
+; 実行ファイルの作り方
+; 1. HSPスクリプトエディタ上で「実行ファイル自動作成」を実行
+; 2. 
+
+#define GWL_STYLE	$FFFFFFF0
+#define WS_MINIMIZEBOX	$00020000
+#define WS_MAXIMIZEBOX	$00010000
+#define MF_GRAYED	$00000001
+#define SC_MINIMIZE	$0000F020
+#define SC_MAXIMIZE	$0000F030
+
+#uselib "user32"
+#cfunc GetWindowLong "GetWindowLongA" sptr,int
+#func SetWindowLong "SetWindowLongA" sptr,int,int
+#func GetSystemMenu "GetSystemMenu" sptr,sptr
+#func EnableMenuItem "EnableMenuItem" sptr,sptr,sptr
+#func DrawMenuBar "DrawMenuBar" sptr
+
+#define BG_IMAGE    "bells.bmp"
+#define CHIME_SOUND "bells.wav"
+#define BG_IMAGE_SX 128
+#define BG_IMAGE_SY 128
+
+#epack   BG_IMAGE
+#epack   CHIME_SOUND
+#packopt name    "bells"
+#packopt runtime "hsp3c.hrt"
+#packopt hide    1
+
+buffer 2, BG_IMAGE_SX, BG_IMAGE_SY
+picload BG_IMAGE
+
+gsel 0, 0
+wx = BG_IMAGE_SX
+wy = BG_IMAGE_SY
+width wx, wy
+title "除夜の鐘"
+
+SetWindowLong hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & (-1 ^ WS_MINIMIZEBOX)
+DrawMenuBar hwnd
+GetSystemMenu hwnd, 0 : hsm = stat
+EnableMenuItem hsm, SC_MINIMIZE, MF_GRAYED
+EnableMenuItem hsm, SC_MAXIMIZE, MF_GRAYED
+
+#include "bells_core.as"
