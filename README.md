@@ -20,7 +20,7 @@
 ブログパーツとして仕様する場合は
 
 ```html
-<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/master/widget.html"
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/1.0.0/widget.html"
 　　　　　width="128" height="128" frameborder="0" scrolling="no"></iframe>
 ```
 
