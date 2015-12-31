@@ -20,13 +20,15 @@
 ブログパーツとして仕様する場合は
 
 ```html
-<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.0/widget.html"
+<iframe src="https://cdn.rawgit.com/sharkpp/joya_no_kane/v1.0.1/widget.html"
 　　　　　width="128" height="128" frameborder="0" scrolling="no"></iframe>
 ```
 
 のようにしてください。
 
 ただし、ランタイムやリソースを含めたサイズの合計が 1MB 程度あるので注意が必要です。
+
+また、PC以外では音が鳴らなかったり動作しなかったりする可能性があります。
 
 ## ライセンス
 
