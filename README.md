@@ -4,6 +4,8 @@
 
 ![スクリーンショット](http://rawgithub.com/sharkpp/joya_no_kane/master/bells.png)
 
+[デモページ](http://sharkpp.github.io/joya_no_kane/)
+
 ## 必要なもの
 
 * HSP 3 以降
